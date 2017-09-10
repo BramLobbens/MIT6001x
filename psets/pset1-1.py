@@ -6,4 +6,4 @@ for letter in s:
     if letter == 'a' or letter == 'e' or letter == 'i' \
     or letter == 'o' or letter =='u':
             vowelCount += 1
-print ('Number of vowels: ' + str(vowelCount))
+print('Number of vowels: ' + str(vowelCount))

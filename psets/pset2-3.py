@@ -1,4 +1,5 @@
 # MIT 6.00.1x Pset2-3
+
 # Set test case variables
 balance = 320000
 annualInterestRate = 0.2

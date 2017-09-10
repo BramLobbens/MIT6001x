@@ -21,18 +21,8 @@ def applyF_filterG(L, f, g):
     # Empty list L and populate with elems from keep        
     L[:] = []
     L += keep
-
+    
     try:
         return max(L)
     except:
         return -1
-
-
-def f(i):
-    return i + 2
-def g(i):
-    return i > 5
-
-L = [0, -10, 5, 6, -4]
-print(applyF_filterG(L, f, g))
-print(L)

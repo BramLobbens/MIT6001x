@@ -9,7 +9,3 @@ def deep_reverse(L):
     L.reverse()
     for list in L:
         list.reverse()
-
-L = [[0, 1, 2], [1, 2, 3], [3, 2, 1], [10, -10, 100]]
-deep_reverse(L) 
-print(L)

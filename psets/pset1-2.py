@@ -8,4 +8,4 @@ for char in s:
         count += 1
     i += 1
 
-print ('Number of times bob occurs is: ' + str(count))
+print('Number of times bob occurs is: ' + str(count))

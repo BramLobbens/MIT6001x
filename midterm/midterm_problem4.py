@@ -18,5 +18,3 @@ def closest_power(base, num):
         exp -= 1
     
     return exp
-
-print(closest_power(4,1))

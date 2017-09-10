@@ -9,5 +9,3 @@ def dotProduct(listA, listB):
     for i, elem in enumerate(listB):
         listC[i] *= elem
     return sum(listC)
-    
-print(dotProduct([1, 2, 3],[4, 5, 6]))

@@ -1,7 +1,6 @@
 # MIT 6.00.1x Final Exam Problem 7
 
 from functools import reduce
-
 def general_poly (L):
     """ L, a list of numbers (n0, n1, n2, ... nk)
     Returns a function, which when applied to a value x, returns the value 
@@ -14,6 +13,3 @@ def general_poly (L):
         return reduce(g, L)
     
     return apply_value
-
-a = general_poly([1, 2, 3, 4])(10)
-print(a)

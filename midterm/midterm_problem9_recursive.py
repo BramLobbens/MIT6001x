@@ -15,6 +15,3 @@ def flatten(aList):
             new_list.append(elem)
             
     return new_list
-
-some_list = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
-print(flatten(some_list))

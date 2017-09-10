@@ -22,49 +22,38 @@ def hangman(secretWord):
     '''
     guesses = []    # Store guesses made
     mistakes = 8    # Number of mistakes allowed
+    dashes = '-'*11 # -----------
     
     print('Welcome to the game, Hangman!\n' +
             'I am thinking of a word that is ' +
-            '{0} letters long'.format(len(secretWord)))
-            
-    print('-'*11) # -----------
+            '{0} letters long'.format(len(secretWord)))    
+     
     
-    while not isWordGuessed(secretWord, guesses):
-        
+    while True:
+        print(dashes)
         print('You have {0} guesses left'.format(mistakes))
-        #print('Your guesses:',guesses)
         availableLetters = getAvailableLetters(guesses)
         print('Available letters:', availableLetters)
+        
+        guess = input('Please guess a letter: ').lower()
+        guesses.append(guess)
         answer = getGuessedWord(secretWord, guesses)
-        
-        while True:
             
-            guess = input('Please guess a letter: ').lower()
-            guesses.append(guess)
-            answer = getGuessedWord(secretWord, guesses)
-            if guess in availableLetters:
-                break
-            else:
-                print('Oops! You\'ve already guessed that letter:',answer)
-                print('-'*11) # -----------
-                print('You have {0} guesses left'.format(mistakes))
-        
-        if guess in secretWord:
+        if guess not in availableLetters:
+            print('Oops! You\'ve already guessed that letter:',answer)
+        elif guess in secretWord:
             print('Good guess:', answer)
-        
         elif guess not in secretWord:
             mistakes -= 1
             print('Oops! That letter is not in my word:',answer)
-            
-        if mistakes == 0:
-            print('-'*11) # -----------
-            print('Sorry, you ran out of guesses. The word was {0}.'.format(secretWord))
-            return None
+            if mistakes == 0:
+                print(dashes)
+                print('Sorry, you ran out of guesses. The word was {0}.'.format(secretWord))
+                break
+
+        if answer == secretWord:
+            print(dashes)
+            print('Congratulations, you won!')
             break
-        
-        print('-'*11) # -----------
-    
-    if answer == secretWord:
-        print('Congratulations, you won!')
-    
+
     return None

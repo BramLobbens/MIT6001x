@@ -1,4 +1,5 @@
 # MIT 6.00.1x Final Exam Problem 4
+# solution incomplete or incorrect
 
 def longest_run(L):
     """
@@ -34,19 +35,11 @@ def longest_run(L):
                     result.append(L[i])
                     longest = result[:]
                 result.clear()
-        print(longest)
-        return sum(longest), len(longest), longest
+
+        return sum(longest), len(longest)
     
     increasing = run(L)
     decreasing = run(L, compare = lambda x, y: x >= y)
     if increasing[1] >= decreasing[1]:
         return increasing[0]
     return decreasing[0]
-
-#a_list = [10, 4, 3, 8, 3, 4, 5, 7, 7, 2]
-#b_list = [5, 4, 10]
-#print(longest_run(a_list))
-#print(longest_run(b_list))
-
-test = [1, 2, 1, 2, 1, 2, 1, 2, -1, -2, -1, -2, 10, 20, 10, 20, 100, 200, 100, 0, 100, 0, 100, 0, 0, 100, 0, 0, 0, 100, 1500000, -1500000, 1, -150001]
-print(longest_run(test))

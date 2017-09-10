@@ -1,4 +1,5 @@
 # MIT 6.00.1x Final Exam Problem 5
+# solution incomplete or incorrect
 
 class USResident(Person):
     """ 
